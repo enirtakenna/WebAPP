@@ -32,7 +32,7 @@ function setState(changes) {
 // Set initial data
 setState({
   contacts: [
-    {key: 1, name: "James K Nelson", email: "james@jamesknelson.com", description: "Front-end Unicorn"},
+    {key: 1, name: "Anne Katrine K. Egsvang", email: "anegs12@student.sdu.dk", description: "Owner"},
     {key: 2, name: "Jim", email: "jim@example.com"},
   ],
   newContact: Object.assign({}, CONTACT_TEMPLATE),
