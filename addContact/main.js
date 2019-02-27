@@ -1,9 +1,7 @@
-/*
- * Constants
- */
 
+/* Constants */
 var apiKey = '6aaxaiGU3sCKM6uusRotgwpSWxj3x6OI';
-var myDB = 'mongodb://<enirtakenna>:<limpistol>@ds163694.mlab.com:63694/mydb';
+var myDB = 'ds163694/mydb';
 var myCollection = 'contacts';
 
 var CONTACT_TEMPLATE = {name: "", email: "", description: "", errors: null};
@@ -54,7 +52,15 @@ function updateNewContact(contact) {
 
 function submitNewContact() {
   var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
-  
+
+    /* Your here */
+    let contactDocument = {
+        name: contact.name,
+        email: contact.email,
+        description: contact.description,
+        _id: contact.email
+    };
+
   if (!contact.name) {
     contact.errors.name = ["Please enter your new contact's name"]
   }
@@ -69,14 +75,8 @@ function submitNewContact() {
         contacts: state.contacts.slice(0).concat(contact),
       }
     : { newContact: contact }
-  )
-/* Where to put me :-) ANVA*/
-    let contactDocument = {
-        name: contact.name,
-        email: contact.email,
-        description: contact.description,
-        _id: contact.email
-    };
+  );
+
     $.ajax( {
         url:'https://api.mlab.com/api/1/databases/'+myDB+'/collections/'+myCollection+'?apiKey='+apiKey,
         data: JSON.stringify( [ contactDocument ] ),
