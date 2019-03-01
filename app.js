@@ -3,6 +3,7 @@ const fs = require('fs');
 const url = require('url');
 const port=process.env.PORT || 3000;
 
+// SERVER
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
@@ -22,34 +23,45 @@ server.listen(port,() => {
     console.log('Server running at port '+port);
 });
 
-// PATHS
-function renderHTML(path, res){
-    fs.readFile(path, null, function(error, data){
-        if (error){
-            res.writheHead(404);
-            res.write("File not found!");
-        } else {
-            res.write(data);
-        }
-        res.end();
-    });
-};
 
-module.exports = {
-    handleRequest: function(req, res){
-        res.writheHead(200, {'Content-Type': 'text/html'});
-
-        var path = url.parse(req.url).pathname;
-        switch (path) {
-            case '/':
-                renderHTML('./indexhtml', res);
-                break;
-            case '/login':
-                renderHTML('./login/index.html', res);
-                break;
-            case '/addContact':
-                renderHTML('./addContact/index.html', res);
-                break;
-        }
+/* PATHS - Where to put you?
+$(document).ready(function () {
+    console.log('Document Ready!');
+    // PATHS
+    function renderHTML(path, res){
+        fs.readFile(path, null, function(error, data){
+            if (error){
+                res.writheHead(404);
+                res.write("File not found!");
+            } else {
+                res.write(data);
+            }
+            res.end();
+        });
     }
-}
+
+    module.exports = {
+        handleRequest: function(req, res){
+            res.writeHead(200, {'Content-Type': 'text/html'});
+
+            var path = url.parse(req.url).pathname;
+            switch (path) {
+                case '/':
+                    renderHTML('./index.html', res);
+                    break;
+                case '/login':
+                    renderHTML('./login.html', res);
+                    break;
+                case '/addContact':
+                    renderHTML('./addContact/index.html', res);
+                    break;
+                default:
+                    res.writeHead(404);
+                    res.write('Route not found!');
+                    res.end();
+            }
+        }
+    };
+});
+*/
+
