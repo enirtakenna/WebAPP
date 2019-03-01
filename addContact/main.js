@@ -1,7 +1,7 @@
 
 /* Constants */
 var apiKey = '6aaxaiGU3sCKM6uusRotgwpSWxj3x6OI';
-var myDB = 'ds163694/mydb';
+var myDB = 'mydb';
 var myCollection = 'contacts';
 
 var CONTACT_TEMPLATE = {name: "", email: "", description: "", errors: null};
@@ -30,6 +30,41 @@ function setState(changes) {
 }
 
 // Set initial data
+/* This is new */
+
+$.ajax({
+    url: 'https://api.mlab.com/api/1/databases/' + myDB + '/collections/' + myCollection + '?apiKey=' + apiKey,
+    success: function(data) {
+        // 1- take data from mLab
+        let newData = [];
+        // 2- preare an array in their format
+        data.forEach( (elem,index)=>{
+            newData.push({
+                key:            index+1,
+                id:             elem.email,
+                name:           elem.name,
+                email:          elem.email,
+                description:    elem.description
+            });
+        });
+        // 3- for each in data -> create one in newData in their format
+
+        console.log( 'newData is ',newData);
+
+        // 4- just insert the newData in their state
+        setState({
+             contacts: newData,
+                 /*[
+                 {key: 1, name: "Anne Katrine K. Egsvang", email: "anegs12@student.sdu.dk", description: "Owner"},
+                 {key: 2, name: "Jim", email: "jim@example.com"},
+             ],*/
+             newContact: Object.assign({}, CONTACT_TEMPLATE),
+         });
+    }
+});
+
+/* OLD Replaced */
+/*
 setState({
   contacts: [
     {key: 1, name: "Anne Katrine K. Egsvang", email: "anegs12@student.sdu.dk", description: "Owner"},
@@ -37,7 +72,7 @@ setState({
   ],
   newContact: Object.assign({}, CONTACT_TEMPLATE),
 });
-
+*/
 
 
 /*
@@ -51,15 +86,8 @@ function updateNewContact(contact) {
 
 
 function submitNewContact() {
+    // 1- the form sent all data in   contact
   var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
-
-    /* Your here */
-    let contactDocument = {
-        name: contact.name,
-        email: contact.email,
-        description: contact.description,
-        _id: contact.email
-    };
 
   if (!contact.name) {
     contact.errors.name = ["Please enter your new contact's name"]
@@ -68,6 +96,7 @@ function submitNewContact() {
     contact.errors.email = ["Please enter your new contact's email"]
   }
 
+  // 2- insert contact object in the state
   setState(
     Object.keys(contact.errors).length === 0
     ? {
@@ -77,11 +106,20 @@ function submitNewContact() {
     : { newContact: contact }
   );
 
-    $.ajax( {
-        url:'https://api.mlab.com/api/1/databases/'+myDB+'/collections/'+myCollection+'?apiKey='+apiKey,
-        data: JSON.stringify( [ contactDocument ] ),
-        type: 'POST',
-        contentType: 'application/json'
-    } );
+  // 3- convert data inside contact in our format
+  let contactDocument = {
+      name: contact.name,
+      email: contact.email,
+      description: contact.description,
+      //_id: contact.email
+  };
+
+  // 4- send my data into mLab (with JSON)
+  $.ajax( {
+      url:'https://api.mlab.com/api/1/databases/'+myDB+'/collections/'+myCollection+'?apiKey='+apiKey,
+      data: JSON.stringify( contactDocument ),
+      type: 'POST',
+      contentType: 'application/json'
+  });
 
 }

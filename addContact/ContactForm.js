@@ -18,12 +18,12 @@ var ContactForm = React.createClass({
   },
 
   onSubmit: function(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.props.onSubmit()
   },
 
   render: function() {
-    var errors = this.props.value.errors || {}
+    var errors = this.props.value.errors || {};
 
     return (
       React.createElement('form', {onSubmit: this.onSubmit, className: 'ContactForm', noValidate: true},
