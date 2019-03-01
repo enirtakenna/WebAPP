@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269ca800-baaf-4614-9bb8-44108d2992af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1/jquery/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1/jquery/jquery-ui.js" afterDir="false" />
@@ -15,9 +14,8 @@
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1/node_modules/stream-spigot/test/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1/node_modules/stream-spigot/test/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1/node_modules/xtend/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1/node_modules/xtend/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises/myserver1/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises/myserver1/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addContact/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/addContact/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addContact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/addContact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addContact/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/addContact/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,19 +29,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addContact/index.html">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state relative-caret-position="407">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addContact/main.js">
+        <entry file="file://$PROJECT_DIR$/login/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -69,18 +76,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/addContact/index.html" />
         <option value="$PROJECT_DIR$/addContact/ContactForm.js" />
         <option value="$PROJECT_DIR$/addContact/ContactsView.js" />
         <option value="$PROJECT_DIR$/addContact/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/login/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-17" />
+    <option name="x" value="-32" />
+    <option name="y" value="-20" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -146,12 +154,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550830898247</updated>
       <workItem from="1550830899453" duration="6160000" />
-      <workItem from="1551271313249" duration="8300000" />
+      <workItem from="1551271313249" duration="11537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14460000" />
+    <option name="totallyTimeSpent" value="17697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -206,27 +214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addContact/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addContact/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -248,10 +235,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/addContact/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addContact/main.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
