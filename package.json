@@ -11,5 +11,8 @@
     "url": "myserver1"
   },
   "author": "enirtakenna",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express-resource": "^1.0.0"
+  }
 }
