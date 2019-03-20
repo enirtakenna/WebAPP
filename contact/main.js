@@ -63,17 +63,6 @@ $.ajax({
     }
 });
 
-/* OLD Replaced */
-/*
-setState({
-  contacts: [
-    {key: 1, name: "Anne Katrine K. Egsvang", email: "anegs12@student.sdu.dk", description: "Owner"},
-    {key: 2, name: "Jim", email: "jim@example.com"},
-  ],
-  newContact: Object.assign({}, CONTACT_TEMPLATE),
-});
-*/
-
 
 /*
  * Actions
