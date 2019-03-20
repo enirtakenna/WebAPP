@@ -37,7 +37,7 @@ $.ajax({
     success: function(data) {
         // 1- take data from mLab
         let newData = [];
-        // 2- preare an array in their format
+        // 2- prepare an array in their format
         data.forEach( (elem,index)=>{
             newData.push({
                 key:            index+1,
