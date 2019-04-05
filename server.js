@@ -1,3 +1,4 @@
+// Mongoose and ToDoList example -> should fit in app.js
 var express, app, port, mongoose, Task, bodyParser;
 express = require('express');
 app = express();
