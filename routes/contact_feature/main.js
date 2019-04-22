@@ -1,17 +1,13 @@
 
 /* Constants */
-var apiKey = '6aaxaiGU3sCKM6uusRotgwpSWxj3x6OI';
-var myDB = 'mydb';
-var myCollection = 'contacts';
+const apiKey = '6aaxaiGU3sCKM6uusRotgwpSWxj3x6OI';
+const myDB = 'mydb';
+const myCollection = 'contacts'; // ContactsDatabase
 
 var CONTACT_TEMPLATE = {name: "", email: "", description: "", errors: null};
 
 
-
-/*
- * Model
- */
-
+/* Model */
 
 // The app's complete current state
 var state = {};
@@ -75,17 +71,17 @@ function updateNewContact(contact) {
 
 
 function submitNewContact() {
-    // 1- the form sent all data in   contact
+    // 1- the form sent all data in   contact_feature
   var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
 
   if (!contact.name) {
-    contact.errors.name = ["Please enter your new contact's name"]
+    contact.errors.name = ["Please enter your new contact_feature's name"]
   }
   if (!/.+@.+\..+/.test(contact.email)) {
-    contact.errors.email = ["Please enter your new contact's email"]
+    contact.errors.email = ["Please enter your new contact_feature's email"]
   }
 
-  // 2- insert contact object in the state
+  // 2- insert contact_feature object in the state
   setState(
     Object.keys(contact.errors).length === 0
     ? {
@@ -95,12 +91,12 @@ function submitNewContact() {
     : { newContact: contact }
   );
 
-  // 3- convert data inside contact in our format
+  // 3- convert data inside contact_feature in our format
   let contactDocument = {
       name: contact.name,
       email: contact.email,
       description: contact.description,
-      //_id: contact.email
+      //_id: contact_feature.email
   };
 
   // 4- send my data into mLab (with JSON)
