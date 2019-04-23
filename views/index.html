@@ -5,6 +5,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Workspace</title>
+
+    <style>
+
+        #root {
+            position: relative;
+            height: 100vh;
+            max-width: 300vh;
+            background-color: #888888;
+            padding: auto;
+            margin: auto;
+        }
+        #header{
+            position: relative;
+            width: 100%;
+            min-height: 11vh;
+        }
+        #footer {
+            position: relative;
+            bottom: 0px;
+            min-height: 10vh;
+            background-color: gainsboro;
+            width: 100%
+        }
+    </style>
+
 </head>
 <body>
 <div id="page-container">
@@ -25,11 +50,9 @@
         >
     </div>
 
-    <div id="content-wrap"></div>
+    <div id="root">This is where all the content goes</div>
 
-    <div id="footer">
-        <span class="text-muted">Place something here.</span>
-    </div>
+    <div id="footer">Place something here.</div>
 
 </div>
 
