@@ -12,7 +12,7 @@
             position: relative;
             height: 100vh;
             max-width: 300vh;
-            background-color: #888888;
+            background-color: ghostwhite;
             padding: auto;
             margin: auto;
         }
@@ -27,6 +27,11 @@
             min-height: 10vh;
             background-color: gainsboro;
             width: 100%
+        }
+        #users {
+            background-color: gainsboro;
+            min-height: 5vh;
+
         }
     </style>
 
@@ -50,9 +55,21 @@
         >
     </div>
 
-    <div id="root">This is where all the content goes</div>
+    <div id="root">
+        <div id="users">This is where active users will be displayed real-time.</div>
+        <p>This is where all the content goes.</p>
+    </div>
 
-    <div id="footer">Place something here.</div>
+    <div id="footer">
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>Footer stuff.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
 
 </div>
 
