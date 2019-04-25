@@ -5,8 +5,8 @@ let viewsId = 0;
 
 function ClientState(id){
     this.id = id;
-    this.posX = ~~( Math.random()*640 );
-    this.posY = ~~( Math.random()*480 );
+    this.posX = ~~( Math.random()*640 ); //change to inline-block.like instead
+    this.posY = ~~( Math.random()*480 ); //change to inline-block.like instead
 }
 
 exports.initialize = function (server) {
@@ -16,16 +16,9 @@ exports.initialize = function (server) {
         views[ socket.id ] = new ClientState(socket.id);
         socket.emit('yourId',{id:socket.id});
         viewsId++;
-/*
-        socket.on('move', function(data) {
-            clientState = views[socket.id];
-            clientState.posX = data.x;
-            clientState.posY = data.y + (Math.random()*10)-5;
-            updateAllViews();
-        });
-*/
+
         socket.on('disconnect', function() {
-            console.log(viewsId + ' disconnected'); //when disconnecting, the position stays the same for each element, but once you disconnect an element of the first 1+ kind, the colors move one element-'step' forwards. each element should have it's own color attached, also when disconnecting.
+            console.log(viewsId + 'Got disconnect!');
             delete views[socket.id];
             viewsId--;
         });
@@ -42,7 +35,7 @@ exports.initialize = function (server) {
                 socket.broadcast.emit('update',views);
                 socket.emit('update',views);
             }
-            setTimeout(updateAllViews,10000); // once every 10 seconds
+            setTimeout(updateAllViews,5000); // once every 5 seconds
         }
         updateAllViews();
     });
