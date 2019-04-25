@@ -7,6 +7,9 @@ var router = express.Router();
 var app = express();
 const port=process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('public', express.static(path.join(__dirname, 'users_feature')));
+app.use('public', express.static(path.join(__dirname, 'todolist_feature')));
+app.use('public', express.static(path.join(__dirname, 'contact_feature')));
 
 // ERROR HANDLERS
 app.use(function(req, res, next) {
@@ -28,7 +31,7 @@ app.use(function(err, req, res, next) {
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
 
-    fs.readFile('/public/index.html', null, function(error, data){ // callback function
+    fs.readFile('/public/users.html', null, function(error, data){ // callback function
         if (error){
             res.writeHead(404);
             res.write('File not found!'); // ANDREA
@@ -48,7 +51,7 @@ server.listen(port,() => {
 
 // ROUTES - doesn't work yet
 router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname+'/users.html'));
     //__dirname : It will resolve to your project folder.
 });
 

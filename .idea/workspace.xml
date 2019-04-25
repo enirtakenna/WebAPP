@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269ca800-baaf-4614-9bb8-44108d2992af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/users_feature/UsersView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/users_feature/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sockets.js" beforeDir="false" afterPath="$PROJECT_DIR$/sockets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/ContactItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/ContactItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/ContactsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/ContactsView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/polyfills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact_feature/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/goals.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/goals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/TaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/TaskForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/TaskItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/TaskItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/TasksView.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/TasksView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/polyfills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/todolist_feature/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/UserForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/UserItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/UsersView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/users_feature/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/users_feature/polyfills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users_feature/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/users_feature/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact_feature/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/todolist_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/todolist_feature/todolist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/users_feature/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/users_feature/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,10 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/users_feature/index.html">
+        <entry file="file://$PROJECT_DIR$/public/users_feature/users.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="238">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -78,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+            <state relative-caret-position="153">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -136,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/models/loginModel.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/views/login.html" />
         <option value="$PROJECT_DIR$/viewController.js" />
@@ -167,7 +139,6 @@
         <option value="$PROJECT_DIR$/views/welcome.html" />
         <option value="$PROJECT_DIR$/views/dashboard.html" />
         <option value="$PROJECT_DIR$/views/css/main.css" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/goals.js" />
         <option value="$PROJECT_DIR$/views/header.js" />
         <option value="$PROJECT_DIR$/views/goals.html" />
@@ -186,6 +157,8 @@
         <option value="$PROJECT_DIR$/public/users_feature/main.js" />
         <option value="$PROJECT_DIR$/public/main.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/router.js" />
         <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
@@ -221,18 +194,6 @@
               <item name="WebAPP" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WebAPP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="todolist_feature" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebAPP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="users_feature" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -250,19 +211,19 @@
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP" />
+      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\views" />
+      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\routes" />
+      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\bin" />
+      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\views\users_feature" />
       <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\socket_example" />
       <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\public\css" />
       <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\public\js" />
       <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\views" />
-      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\routes" />
-      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP" />
-      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\bin" />
-      <recent name="C:\Users\Anne Katrine\WebstormProjects\WebAPP\api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -312,16 +273,15 @@
       <workItem from="1555497367243" duration="8138000" />
       <workItem from="1555925147196" duration="34987000" />
       <workItem from="1556190193843" duration="3762000" />
-      <workItem from="1556194315126" duration="186000" />
+      <workItem from="1556194315126" duration="1440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134042000" />
+    <option name="totallyTimeSpent" value="135296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12574404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -426,13 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewController.js" />
     <entry file="file://$PROJECT_DIR$/style.css" />
     <entry file="file://$PROJECT_DIR$/server.js" />
@@ -489,14 +442,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/todolist_feature/index.html">
+    <entry file="file://$PROJECT_DIR$/public/todolist_feature/todolist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/contact_feature/index.html">
+    <entry file="file://$PROJECT_DIR$/public/contact_feature/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="40" />
@@ -514,13 +467,6 @@
     <entry file="file://$PROJECT_DIR$/views/users_feature/UserItem.js" />
     <entry file="file://$PROJECT_DIR$/public/main.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/users_feature/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/users_feature/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -557,10 +503,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/users_feature/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        <state relative-caret-position="153">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
