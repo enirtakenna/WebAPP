@@ -3,6 +3,7 @@ var fs = require('fs');
 var express = require('express');
 var path = require('path');
 var router = express.Router();
+var io = require('socket.io');
 
 var app = express();
 
@@ -65,7 +66,7 @@ app.use('/', router);
 
 
 // SOCKETS
-require('./sockets.js').initialize(server); //sockets for showing "active" users real-time
+require('/sockets.js').initialize(server); //sockets for showing "active" users real-time
 
 // EXPORT app.js
 module.exports = app;
