@@ -16,7 +16,7 @@
             position: relative;
             height: 100vh;
             max-width: 300vh;
-            background-color: ghostwhite;
+            background-color: white;
 
         }
         #header{
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="content">
-            <div id="content" class="container">
+            <div id="space" class="container">
                 <p>This is where the todolist goes.</p>
             </div>
         </div>
@@ -109,6 +109,13 @@
 </div>
 
 <script type="text/javascript" >
+
+    $(document).ready( function() {
+
+        //$("#space").load("./todolist_feature/todolist.html");
+
+    });
+
     // 1) establish socket connection
 
     // 2) setup
@@ -173,7 +180,7 @@
 <script src="https://fb.me/react-0.14.3.js"></script>
 <script src="https://fb.me/react-dom-0.14.3.js"></script>
 
-<script type="text/javascript"  src="./users_feature/main.js"></script>
+<script type="text/javascript"  src="./main.js"></script>
 
 </body>
 </html>

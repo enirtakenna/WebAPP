@@ -66,7 +66,7 @@ app.use('/', router);
 
 
 // SOCKETS
-require('/sockets.js').initialize(server); //sockets for showing "active" users real-time
+require('./sockets.js').initialize(server); //sockets for showing "active" users real-time
 
 // EXPORT app.js
 module.exports = app;
