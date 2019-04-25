@@ -29,7 +29,7 @@ app.use(function(err, req, res, next) {
 const port=process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
-    fs.readFile('./public/index.html', null, function(error, data){ // callback function
+    fs.readFile('public/index.html', null, function(error, data){ // callback function
         if (error){
             res.writeHead(404);
             res.write('File not found!'); // ANDREA
