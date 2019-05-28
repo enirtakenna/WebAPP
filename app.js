@@ -3,16 +3,14 @@ var fs = require('fs');
 var express = require('express');
 var path = require('path');
 var router = express.Router();
-var io = require('socket.io');
 
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('public', express.static(path.join(__dirname, 'users_feature')));
-// app.use('public', express.static(path.join(__dirname, 'todolist_feature')));
-// app.use('public', express.static(path.join(__dirname, 'contact_feature')));
 
-// ERROR HANDLERS
+
+// ERROR HANDLER
+
 app.use(function(req, res, next) {
     let err = new Error('Not Found');
     err.status = 404;
@@ -25,19 +23,27 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: err
     });
+
 });
 
+// SERVER
 const port=process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     fs.readFile('public/index.html', null, function(error, data){ // callback function
         if (error){
             res.writeHead(404);
-            res.write('File not found!'); // ANDREA
+            res.write('File not found!');
         }
-        else {
-            res.write(data);
+        else {res.write(data);}
+        res.end();
+    });
+    fs.readFile('public/main.js', null, function(error, data){ // callback function
+        if (error){
+            res.writeHead(404);
+            res.write('File not found!');
         }
+        else {res.write(data);}
         res.end();
     });
 
@@ -45,30 +51,40 @@ const server = http.createServer((req, res) => {
 
 server.listen(port,() => {
     console.log('Server running at port '+port);
+
 });
 
 
-// ROUTES - doesn't work yet
+// ROUTES
 router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/users.html'));
+    res.sendFile(path.join(__dirname+'/index.html'));
     //__dirname : It will resolve to your project folder.
+
+    res.readFile('sockets.js', null, function(error, data){ // callback function
+        if (error){
+            res.writeHead(404);
+            res.write('File not found!');
+        }
+        else {
+            res.write(data);
+            res.send('sockets.js read');
+        }
+    });
+    res.end();
 });
 
 router.get('/dashboard',function(req,res){
     res.sendFile(path.join(__dirname+'/dashboard.html'));
 });
 
-router.get('/goals',function(req,res){
-    res.sendFile(path.join(__dirname+'/goals.html'));
+router.get('/events',function(req,res){
+    res.sendFile(path.join(__dirname+'/events.html'));
+    res.write('This is events');
 });
+
 // ADD ROUTER
 app.use('/', router);
 
 
-// SOCKETS
-require('./sockets.js').initialize(server); //sockets for showing "active" users real-time
-
-// EXPORT app.js
-module.exports = app;
 
 

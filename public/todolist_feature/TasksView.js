@@ -6,6 +6,11 @@ var TasksView = React.createClass({
         onNewTaskSubmit: React.PropTypes.func.isRequired,
     },
 
+    removeItem(item, i) {
+        this.props.removeTask(item, i);
+    },
+
+
     render: function() {
         return (
             React.createElement('div', {className: 'TasksView'},
@@ -13,7 +18,9 @@ var TasksView = React.createClass({
                 React.createElement('ul', {className: 'TasksView-list'},
                     this.props.tasks.map(function(task) {
                         return React.createElement(TaskItem, task)
-                    })),
+                    })
+
+                ),
                 React.createElement(TaskForm, {
                     value: this.props.newTask,
                     onChange: this.props.onNewTaskChange,

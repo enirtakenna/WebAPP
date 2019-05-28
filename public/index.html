@@ -6,63 +6,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript" src="../sockets.js"></script>
+
+    <link rel="shortcut icon" href="#">
 
     <title>Workspace</title>
 
-    <style>
-
-        #root {
-            position: relative;
-            height: 100vh;
-            max-width: 300vh;
-            background-color: white;
-
-        }
-        #header{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: 0;
-        }
-        #footer {
-            position: sticky;
-            bottom: 0;
-            max-height: 10vh;
-            background-color: gainsboro;
-            width: 100%
-        }
-        #users {
-            min-height: 5vh;
-            margin: 3px;
-        }
-        #usersdisplay{
-            left: 0;
-            margin: 0;
-            padding: 3px;
-            height: 100%;
-            background-color: #343A40;
-        }
-        .content{
-            display: inline-block;
-            height: 100%;
-        }
-    </style>
 
 </head>
 <body>
+
+<div id='loadingScreen'></div>
+
 <div id="page-container">
 
     <div id="header">
 
         <nav class="navbar navbar-dark bg-dark" href="/" style="min-height: 11vh">
             <a class="header-logo" href="/">
-                <span class="navbar-brand mb-0 h1 header-logo-loading">Workspace</span>
+                <span class="navbar-brand mb-0 h1 header-logo-loading"><span id="Workspace-brand">Workspace</span></span>
             </a>
 
             <div class="btn-group" role="group">
                 <a class="btn btn-outline-info" id="dashboard-button" href="/dashboard">Dashboard</a>
-                <a class="btn btn-outline-success goal-btn" id="goals-button" href="/goals">Goals</a>
+                <a class="btn btn-outline-success goal-btn" id="goals-button" href="/events">Events</a>
             </div>
         </nav>
 
@@ -89,7 +55,7 @@
         </div>
         <div class="content">
             <div id="space" class="container">
-                <p>This is where the todolist goes.</p>
+                <div id="todolistspace"></div>
             </div>
         </div>
 
@@ -108,71 +74,6 @@
 
 </div>
 
-<script type="text/javascript" >
-
-    $(document).ready( function() {
-
-        //$("#space").load("./todolist_feature/todolist.html");
-
-    });
-
-    // 1) establish socket connection
-
-    // 2) setup
-
-
-    let users = document.getElementById('users'); // where in the doc the circles go
-    let ctx = users.getContext('2d');
-    let width = users.width;
-    let height= users.height;
-
-    // -----------------------------------------------------
-
-    let myId = null;
-    let PHI = (1 + Math.sqrt(5))/2;
-    let socket = io.connect('/'); // Where users get active
-
-    socket.on('yourId', function(data){
-        myId = data.id;
-        console.log( 'got my id = ' + myId);
-    });
-
-    socket.on('update', function(views){
-        // clear canvas
-        ctx.fillStyle = "lightgrey";
-        ctx.fillRect(0,0, width, height); // fill the canves area with its width and height
-        let id = 0;
-        let hue = 0;
-        console.log( '--------------' );
-        for (let key in views) {
-            let view = views[key];
-            ctx.beginPath(); // create a new path for new rectangle
-            ctx.arc(view.posX, view.posY / 2, 20, 0, 2 * Math.PI, false); // circle
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "white";
-            ctx.stroke();
-
-            /* based on:
-               http://stackoverflow.com/questions/1168260/algorithm-for-generating-unique-colors
-            */
-            hue = ~~( (id * PHI - ~~(id * PHI)) * 256);
-            ctx.fillStyle = 'hsl(' + hue + ', 80%, 70%)';
-            ctx.fill();
-
-            console.log( myId + "   <->   " + view.id );
-            if (myId==view.id){
-                ctx.strokeStyle = 'white';
-                ctx.stroke();
-            }
-            id++;
-
-            console.log( view );
-        }
-        console.log( '--------------' );
-    });
-
-</script>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -180,7 +81,14 @@
 <script src="https://fb.me/react-0.14.3.js"></script>
 <script src="https://fb.me/react-dom-0.14.3.js"></script>
 
-<script type="text/javascript"  src="./main.js"></script>
+<script src="todolist_feature/polyfills.js"></script>
+
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+
+<script src="todolist_feature/TaskItem.js"></script>
+<script src="todolist_feature/TaskForm.js"></script>
+<script src="todolist_feature/TasksView.js"></script>
 
 </body>
 </html>

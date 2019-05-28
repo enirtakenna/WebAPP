@@ -45,7 +45,7 @@ $.ajax({
         });
         // 3- for each in data -> create one in newData in their format
 
-        console.log( 'newData is ',newData);
+        console.log( 'Current contacts are ',newData);
 
         // 4- just insert the newData in their state
         setState({

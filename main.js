@@ -19,8 +19,9 @@ function setState(changes) {
         React.createElement(TasksView, Object.assign({}, state, {
             onNewTaskChange: updateNewTask,
             onNewTaskSubmit: submitNewTask,
+            //onTaskDelete: deleteTask,
         })),
-        document.getElementById('Workspace-app')
+        document.getElementById('todolistspace')
     );
 }
 
@@ -40,12 +41,13 @@ $.ajax({
             });
         });
         // 3- for each in data -> create one in newData in their format
-        console.log( 'newData is ',newData);
+        console.log( 'Current data is ',newData);
 
         // 4- just insert the newData in their state
         setState({
             tasks: newData,
             newTask: Object.assign({}, TASK_TEMPLATE),
+            //deleteTask: ,
         });
     }
 });
@@ -91,21 +93,17 @@ function submitNewTask() {
 }
 
 /*
-function deleteTask(task) {
-    // when delete-btn clicked, get this.task
-    // setState({deleteTask: task});
 
+//Error, something with CORS Policy wont allow to delete
+function deleteTask(data) {
 
-    $.ajax({ url: 'https://api.mlab.com/api/1/databases/'+myDB+'/collections/'+myCollection+'?apiKey='+apiKey,
-        type: 'DELETE',
-        timeout: 300000, // 5 minutes
-        success: function(data) {
-        // TODO: remove the contact. We’ll do this in a follow-up post.
-            myCollection.remove(this);
-        },
-        error: function(xhr, status, err) {
-        // TODO: surface the error to the user.
-        }
-});
+    $.ajax( {
+        url: 'https://api.mlab.com/api/1/databases/'+myDB+'/collections/'+myCollection+'?apiKey='+apiKey,
+		  type: "DELETE",
+		  async: true,
+		  timeout: 300000,
+		  success: function (data) { alert('the task was deleted') },
+		  error: function (xhr, status, err) { }
+    });
+}
 */
-

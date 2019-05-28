@@ -6,26 +6,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <style>
+        @font-face {
+            font-family: 'porcelain';
+            src: url('./Porcelain-font/Porcelain.otf'),
+            url('./Porcelain-font/Porcelain.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #Workspace-brand{
+            font-family: 'porcelain';
+            font-size: 180%;
+            padding: 10px;
+            color: darkturquoise;
+        }
+    </style>
+
 </head>
 <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" id="workspace" href="#"><span class="navbar-brand mb-0 h1">Workspace</span></a>
-        <form class="form-inline">
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            <button type="button" role="button" class="btn btn-outline-success goal-btn">Goals</button>
-        </form>
-        </a>
-    </nav>
     <div class="jumbotron">
-        <h1 class="display-4">Welcome to WorkSpace!</h1>
+        <h1 class="display-4">Welcome to <span id="Workspace-brand">Workspace</span>!</h1>
         <p class="lead">This is the place where you get things done and reach awesome goals, not by yourself, but together with your team.</p>
         <hr class="my-4">
         <p>Let's get to work!</p>
-        <a class="btn btn-primary btn-lg" role="button" href="./dashboard">Dashboard</a>
-    </div>
-    <div class="container" id="view-loader">
-        This is where the To-Do List goes
+        <a class="btn btn-info btn-lg" role="button" href="./dashboard">Dashboard</a>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

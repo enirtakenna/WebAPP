@@ -1,3 +1,7 @@
+// SOCKET HERE - få mig til at virke!
+
+console.log("I've been read");
+
 let io = require('socket.io');
 
 let views = {};
@@ -7,6 +11,7 @@ function ClientState(id){
     this.id = id;
     this.posX = ~~( Math.random()*640 ); //change to inline-block.like instead
     this.posY = ~~( Math.random()*480 ); //change to inline-block.like instead
+    console.log('I am here');
 }
 
 exports.initialize = function (server) {

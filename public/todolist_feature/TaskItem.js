@@ -1,7 +1,18 @@
+
+
 var TaskItem = React.createClass({
     propTypes: {
         description: React.PropTypes.string,
-        id: React.PropTypes.string.isRequired,
+    },
+
+
+
+    removeTask(name, i){
+        let task = this.state.task.slice();
+        task.splice(i, 1);
+        this.setState({
+            task
+        });
     },
 
     render: function() {
@@ -9,7 +20,7 @@ var TaskItem = React.createClass({
             React.createElement('div', {className: 'TaskItem'},
                 React.createElement('div', {className: 'TaskItem-description'}, this.props.description,
                     React.createElement('input',{className: 'TaskCheckbox', type: 'checkbox', id: 'checkbox', defaultChecked: false}),
-                    React.createElement('button', {onClick: this.onClick, type: 'submit', className: "button btn btn-light", id: this.props.id}, "Delete",
+                    React.createElement('button', {onClick: this.props.remove,type: 'submit', className: "button btn btn-light"}, "Delete",
                     )
                 )
             )

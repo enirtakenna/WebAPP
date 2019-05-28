@@ -3,6 +3,7 @@ var TaskForm = React.createClass({
         value: React.PropTypes.object.isRequired,
         onChange: React.PropTypes.func.isRequired,
         onSubmit: React.PropTypes.func.isRequired,
+
     },
 
     onDescriptionInput: function(e) {
@@ -13,6 +14,7 @@ var TaskForm = React.createClass({
         e.preventDefault();
         this.props.onSubmit()
     },
+
 
     render: function() {
         var errors = this.props.value.errors || {};
