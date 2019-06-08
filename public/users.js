@@ -2,10 +2,11 @@
 // 1) establish socket connection
 
 // 2) setup
-let canvas = document.getElementById("canvas"); // make into getElementById("users")
-let ctx = canvas.getContext("2d"); //
+
+let canvas = document.getElementById("online");
+let ctx = canvas.getContext("2d");
 let width = canvas.width;
-let height= canvas.height;
+let height = canvas.height;
 
 
 

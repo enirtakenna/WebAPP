@@ -14,8 +14,8 @@ var TasksView = React.createClass({
     render: function() {
         return (
             React.createElement('div', {className: 'TasksView'},
-                React.createElement('h1', {className: 'TasksView-title'}, "Tasks"),
-                React.createElement('ul', {className: 'TasksView-list'},
+                React.createElement('h1', {className: 'EventsView-title'}, "Tasks"),
+                React.createElement('ul', {className: 'EventsView-list'},
                     this.props.tasks.map(function(task) {
                         return React.createElement(TaskItem, task)
                     })

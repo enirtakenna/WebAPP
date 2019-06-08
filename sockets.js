@@ -1,7 +1,3 @@
-// SOCKET HERE - få mig til at virke!
-
-console.log("I've been read");
-
 let io = require('socket.io');
 
 let views = {};

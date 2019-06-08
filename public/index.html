@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <link rel="shortcut icon" href="#">
 
     <title>Workspace</title>
+
+    <style>
+        #todolistspace {
+            margin: 1em;
+        }
+        #eventspace{
+            margin: 1em;
+        }
+        @font-face {
+            font-family: 'porcelain';
+            src: url('./Porcelain-font/Porcelain.otf'),
+            url('./Porcelain-font/Porcelain.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #Workspace-brand{
+            font-family: 'porcelain';
+            font-size: 180%;
+            padding: 1em;
+            color: darkturquoise;
+        }
+    </style>
 
 
 </head>
@@ -27,37 +47,34 @@
             </a>
 
             <div class="btn-group" role="group">
-                <a class="btn btn-outline-info" id="dashboard-button" href="/dashboard">Dashboard</a>
-                <a class="btn btn-outline-success goal-btn" id="goals-button" href="/events">Events</a>
+                <button class="btn btn-outline-info" id="dashboard-button">Dashboard</button>
+                <button class="btn btn-outline-success goal-btn" id="event-button">Events</button>
             </div>
         </nav>
 
     </div>
 
     <div id="root">
-        <div class="content">
-            <div id="usersdisplay" class="card rounded-0 border-0" style="width: 18rem;">
-                <div class="card-header text-info">
-                    ONLINE
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item rounded">React element here</li>
-                    <li class="list-group-item">React element here</li>
-                    <li class="list-group-item">React element here</li>
-                </ul>
-                <div class="card-header text-muted">
-                    OFFLINE
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item rounded text-muted">React element here.</li>
-                </ul>
+
+        <div id="usersdisplay" class="card rounded-0 border-0" style="width: 18rem;">
+            <div class="card-header text-info">
+                ONLINE
             </div>
-        </div>
-        <div class="content">
-            <div id="space" class="container">
-                <div id="todolistspace"></div>
+            <ul class="list-group list-group-flush" id="online">
+
+            </ul>
+            <div class="card-header text-muted">
+                OFFLINE
             </div>
+            <ul class="list-group list-group-flush" id="offline">
+
+            </ul>
         </div>
+        <ul class="space">
+            <div id="todolistspace" class="dashboardelem"></div>
+            <div id="eventspace" class="dashboardelem"></div>
+        </ul>
+
 
     </div>
 
@@ -74,21 +91,29 @@
 
 </div>
 
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://fb.me/react-0.14.3.js"></script>
 <script src="https://fb.me/react-dom-0.14.3.js"></script>
-
-<script src="todolist_feature/polyfills.js"></script>
-
 <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
 <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
 
+
+
+<script src="todolist_feature/polyfills.js"></script>
 <script src="todolist_feature/TaskItem.js"></script>
 <script src="todolist_feature/TaskForm.js"></script>
 <script src="todolist_feature/TasksView.js"></script>
+<script src="todolist_feature/main.js"></script>
+<script src="events_feature/EventItem.js"></script>
+<script src="events_feature/EventForm.js"></script>
+<script src="events_feature/EventsView.js"></script>
+<script src="events_feature/main.js"></script>
 
+<script src="/socket.io/socket.io.js"></script>
+<script src="users.js"></script>
 </body>
 </html>
