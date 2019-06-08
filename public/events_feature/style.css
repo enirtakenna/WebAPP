@@ -3,34 +3,34 @@ body {
     margin: 0;
 }
 
-.TasksView-title {
+.EventsView-title {
     font-size: 24px;
     padding: 0 24px;
 }
 
-.TasksView-list {
+.EventsView-list {
     list-style: none;
     margin: 0;
     padding: 0;
     border-top: 1px solid #f0f0f0;
 }
 
-.TaskItem {
+.EventItem {
     margin: 0;
     padding: 8px 24px;
     border-bottom: 1px solid #f0f0f0;
 }
-.TaskItem-description {
+.EventItem-description {
     font-size: 14px;
     margin-top: 4px;
     display: inline-block;
 }
 
-.TaskForm {
+.EventForm {
     padding: 8px 24px;
 }
-.TaskForm > input,
-.TaskForm > textarea {
+.EventForm > input,
+.EventForm > textarea {
     display: block;
     width: 240px;
     padding: 4px 8px;
@@ -39,10 +39,10 @@ body {
     border: 1px solid #888;
     font-size: 14px;
 }
-.TaskForm > input.ContactForm-error {
+.EventForm > input.ContactForm-error {
     border-color: #b30e2f;
 }
 
-.TaskCheckbox {
+.EventCheckbox {
     padding: 8px 24px;
 }

@@ -18,7 +18,8 @@ var EventItem = React.createClass({
     render: function() {
         return (
             React.createElement('div', {className: 'EventItem'},
-                React.createElement('div', {className: 'EventItem-description'}, this.props.description)
+                React.createElement('div', {className: 'EventItem-description'}, this.props.description),
+                React.createElement('button', {type: 'submit', className: "button btn btn-light btn-sm"}, "Remove",)
             )
         )
     },

@@ -10,10 +10,7 @@
     <title>Workspace</title>
 
     <style>
-        #todolistspace {
-            margin: 1em;
-        }
-        #eventspace{
+        #todolistspace, #eventspace {
             margin: 1em;
         }
         .space{
@@ -32,6 +29,12 @@
             padding: 1em;
             color: darkturquoise;
         }
+        .TaskItem-description, .EventItem-description {
+            margin: 1em;
+            border-bottom: 1px solid darkgray;
+            display: inline-block;
+        }
+
     </style>
 
 
@@ -64,7 +67,7 @@
                 ONLINE
             </div>
             <ul class="list-group list-group-flush" id="online">
-
+                <canvas id="canvas" style="width: 100%; height:100%"/>
             </ul>
             <div class="card-header text-muted">
                 OFFLINE

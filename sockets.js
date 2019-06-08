@@ -5,9 +5,8 @@ let viewsId = 0;
 
 function ClientState(id){
     this.id = id;
-    this.posX = ~~( Math.random()*640 ); //change to inline-block.like instead
-    this.posY = ~~( Math.random()*480 ); //change to inline-block.like instead
-    console.log('I am here');
+    //this.posX += 5;
+    //this.posY += 10;
 }
 
 exports.initialize = function (server) {
@@ -27,8 +26,8 @@ exports.initialize = function (server) {
         function updateAllViews(){
             for (let key in views) {
                 let view = views[key];
-                view.posX += ~~(Math.random()*3)-1;
-                view.posY += ~~(Math.random()*3)-1;
+                //view.posX += 5;
+                //view.posY += 10;
             }
 
             if (viewsId>0){
@@ -41,4 +40,4 @@ exports.initialize = function (server) {
         updateAllViews();
     });
 
-}
+};
