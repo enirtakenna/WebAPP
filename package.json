@@ -19,7 +19,7 @@
     "jQuery": "^1.7.4",
     "jade": "^1.11.0",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.19",
+    "mongoose": "^5.7.5",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
